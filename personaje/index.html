@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Super Cuche </title>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* Estilos del panel de coordenadas (arriba a la derecha) */
+    #panel {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: rgba(15, 20, 16, 0.85);
+      color: #00ffcc; /* Texto de coordenadas en cian neón */
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 12px;
+      border: 1px solid #00ffcc;
+      z-index: 100;
+      white-space: pre-line;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Caja de indicaciones ubicadas DEBAJO del panel de coordenadas */
+    #ayuda {
+      position: absolute;
+      top: 110px; /* Bajado para dejar espacio a las coordenadas */
+      right: 15px;
+      background: rgba(15, 20, 16, 0.9);
+      color: #ff94b8;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 13px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+      border: 2px solid #ff6699;
+      max-width: 240px;
+      z-index: 100;
+    }
+
+    #ayuda strong.titulo {
+      color: #ff3385;
+      font-size: 14px;
+      display: block;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-align: center;
+    }
+
+    #ayuda p {
+      margin: 4px 0;
+      color: #ffb3d1;
+      line-height: 1.2;
+    }
+
+    #ayuda p strong {
+      color: #ffffff;
+      background: #ff3385;
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+  </style>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./libs/three/build/three.module.js",
+        "three/addons/": "./libs/three/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+  <div id="panel"></div>
+
+  <div id="ayuda">
+    <strong class="titulo">Controles del Cuche</strong>
+    <p>ArrowRight = Mover derecha</p>
+    <p>ArrowLeft = Mover izquierda</p>
+    <p>ArrowUp = Mover adelante</p>
+    <p>ArrowDown = Mover atrás</p>
+    <p>Espacio = Salto / Brinco</p>
+    <p>Q / E = Girar dirección</p>
+    <p>+ / - = Cambiar tamaño</p>
+    <p>G = Efecto Gelatina</p>
+    <p>B = Disparar fuego</p>
+    <p>M = Piedra gigante</p>
+    <p>N = Disparar rayos</p>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
